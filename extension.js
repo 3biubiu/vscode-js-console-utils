@@ -55,14 +55,17 @@ function activate(context) {
 
         const selection = editor.selection;
         const text = editor.document.getText(selection);
+        const textStr = editor.document.getText(selection) + '';
 
+        // 通过副标题获取指定的配置
+        const config = vscode.workspace.getConfiguration().get("Console.template");
         text
             ? vscode.commands.executeCommand('editor.action.insertLineAfter')
                 .then(() => {
-                    const logToInsert = `console.log('${text}: ', ${text});`;
+                    const logToInsert = eval('`'+"console.log(`%c ${textStr}: ${text}`,'color:#1f6cdd');"+'`');
                     insertText(logToInsert);
                 })
-            : insertText('console.log();');
+            : insertText('console.log("biubiu");');
 
     });
     context.subscriptions.push(insertLogStatement);

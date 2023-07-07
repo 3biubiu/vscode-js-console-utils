@@ -1,20 +1,17 @@
 {
-    "name": "vscode-js-console-utils",
-    "displayName": "javascript console utils",
+    "name": "js-console-plus",
+    "displayName": "javascript console plus",
     "description": "Help insert and remove console.(*) statements",
-    "version": "0.7.0",
-    "publisher": "whtouche",
-    "repository": "https://github.com/whtouche/vscode-js-console-utils",
+    "version": "0.1.0",
+    "publisher": "BIUBIU_UP",
+    "repository": "https://github.com/3biubiu/vscode-js-console-utils",
     "engines": {
         "vscode": "^1.5.0"
     },
     "categories": [
         "Other"
     ],
-    "activationEvents": [
-        "onCommand:extension.insertLogStatement",
-        "onCommand:extension.deleteAllLogStatements"
-    ],
+    "activationEvents": [],
     "main": "./extension",
     "contributes": {
         "commands": [
@@ -39,7 +36,17 @@
                 "key": "shift+ctrl+d",
                 "mac": "shift+cmd+d"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "JS-Console-PLUS",
+            "properties": {
+                "Console.template": {
+                    "type": "string",
+                    "default": "console.log('${text}: ', ${text});",
+                    "description": "此处配置框选时的默认模板,text为用户框选内容,不可改."
+                }
+            }
+        }
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",

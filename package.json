@@ -42,8 +42,13 @@
             "properties": {
                 "Console.template": {
                     "type": "string",
-                    "default": "console.log('${text}: ', ${text});",
-                    "description": "此处配置框选时的默认模板,text为用户框选内容,不可改."
+                    "default": "*${textStr}* ",
+                    "description": "此处配置框选时的默认模板,textStr为用户框选的变量名"
+                },
+                "Console.style": {
+                    "type": "string",
+                    "default": "background: #3b8eea; line-height: 22px;border-radius:4px;font-weight: 600",
+                    "description": "配置console时的样式"
                 }
             }
         }

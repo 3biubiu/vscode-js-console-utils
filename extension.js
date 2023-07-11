@@ -58,13 +58,15 @@ function activate(context) {
         const textStr = editor.document.getText(selection) + '';
 
         // 通过副标题获取指定的配置
-        const config = vscode.workspace.getConfiguration().get("Console.template");
-        const styling = ` color:#1f6cdd;line-height: 22px;border-radius: 4px:font-weight: 600`
+        let template = vscode.workspace.getConfiguration().get("Console.template");
+        template = template.replace('${textStr}',textStr)
+        const styling = vscode.workspace.getConfiguration().get("Console.style");
+        // ` color:#1f6cdd;line-height: 22px;border-radius: 4px:font-weight: 600`
         text
             ? vscode.commands.executeCommand('editor.action.insertLineAfter')
                 .then(() => {
                     // const logToInsert = eval('`'+"console.log(`%c ${textStr}: ${text}`,'color:#1f6cdd');"+'`');
-                    const logToInsert = "console.log(" + `\`%c ${textStr}:\`` + `,'${styling}',` +  `${text});`
+                    const logToInsert = "console.log(" + `  \`%c ${template}\` ` + `,'${styling}',` +  `${text});`
 
                     insertText(logToInsert);
                 })

@@ -19,8 +19,9 @@ With selection:
 
 * ```js
   console.log(  `%c *variable* ` ,'background: #3b8eea; line-height: 22px;border-radius:4px;font-weight: 600',variable);
-  
   ```
+  
+* ![image-20230711214133309](https://s2.loli.net/2023/07/11/tvDP2SJRumdLeU4.png)
 
 Without selection:
 * Press Cmd+Shift+L

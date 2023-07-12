@@ -3,7 +3,7 @@
     "displayName": "javascript console plus",
     "description": "Help insert and remove console.(*) statements",
     "version": "0.1.1",
-    "publisher": "BIUBIU_UP",
+    "publisher": "BIUBIUUP",
     "repository": "https://github.com/3biubiu/vscode-js-console-utils",
     "engines": {
         "vscode": "^1.5.0"

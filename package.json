@@ -2,7 +2,7 @@
     "name": "js-console-plus",
     "displayName": "javascript console plus",
     "description": "Help insert and remove console.(*) statements",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "publisher": "BIUBIUUP",
     "repository": "https://github.com/3biubiu/vscode-js-console-utils",
     "engines": {

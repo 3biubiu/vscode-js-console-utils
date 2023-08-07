@@ -70,7 +70,7 @@ function activate(context) {
 
                     insertText(logToInsert);
                 })
-            : insertText('console.log("biubiu");');
+            : insertText('console.log();');
 
     });
     context.subscriptions.push(insertLogStatement);
